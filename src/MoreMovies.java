@@ -58,6 +58,7 @@ public class MoreMovies {
 			if (responseType(response)) {
 				Set<String> tempSet = new TreeSet<>();
 				for (int i = 0; i < 199; i = i + 2) {
+					response = response.toLowerCase();
 					if (movieArray[i + 1].contains(response)) {
 						tempSet.add(movieArray[i]);
 					}
@@ -73,8 +74,8 @@ public class MoreMovies {
 				cont = false;
 			
 		}
-		System.out.println("Goodbye");
-		}
+		
+		} System.out.println("Goodbye");
 
 	}
 
@@ -87,6 +88,7 @@ public class MoreMovies {
 		if ((response.equalsIgnoreCase("drama")) || (response.equalsIgnoreCase("musical"))
 				|| (response.equalsIgnoreCase("scifi")) || (response.equalsIgnoreCase("comedy"))
 				|| (response.equalsIgnoreCase("horror")) || (response.equalsIgnoreCase("animated"))) {
+			
 			return true;
 		}
 
